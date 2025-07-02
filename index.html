@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1 class="title">🌤️ Weather Now</h1>
+
+    <div class="form">
+      <input
+        id="cityInput"
+        type="text"
+        placeholder="Enter city (e.g. Delhi)"
+        autocomplete="off"
+      />
+      <button id="searchBtn">Get&nbsp;Weather</button>
+    </div>
+
+    <!-- Loading spinner -->
+    <div id="loader" class="loader hidden"></div>
+
+    <!-- Results / errors appear here -->
+    <section id="weatherResult"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,85 @@
+/* ------ general reset ------ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ------ page layout with image background ------ */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: system-ui, Arial, sans-serif;
+  background: url("bgOwa.webp") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* ------ card wrapper ------ */
+.card {
+  background: #ffffffee;
+  width: 100%;
+  max-width: 420px;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+  text-align: center;
+}
+
+/* ------ title ------ */
+.title { margin-bottom: 1rem; }
+
+/* ------ form ------ */
+.form {
+  display: flex;
+  gap: .5rem;
+  margin-bottom: 1rem;
+}
+
+#cityInput {
+  flex: 1;
+  padding: .75rem;
+  border: 2px solid #66a6ff;
+  border-radius: .75rem;
+  font-size: 1rem;
+}
+
+#searchBtn {
+  background: #66a6ff;
+  color: #fff;
+  border: none;
+  border-radius: .75rem;
+  padding: .75rem 1rem;
+  cursor: pointer;
+  transition: background .2s;
+}
+#searchBtn:hover { background: #4d8fe0; }
+
+/* ------ loader ------ */
+.loader {
+  width: 32px;
+  height: 32px;
+  margin: .5rem auto;
+  border: 4px solid #66a6ff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.hidden { display: none; }
+
+/* ------ result box ------ */
+#weatherResult {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: .75rem;
+  background: #f2f8ff;
+  line-height: 1.6;
+}
+#error { color: #ff3b3b; }
+
+/* icons + temp size */
+.weather-icon {
+  width: 80px;
+  height: 80px;
+  margin: .5rem auto;
+}
+.temp { font-size: 2rem; font-weight: 600; }
